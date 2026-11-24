@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+
+# Scraper runtime artefacts (debug dumps may contain session tokens)
+data/debug/
+data/browser-profile/
+*.log
+
+# Node / frontend
+node_modules/
+web/dist/
+.wrangler/
+
+# Secrets / local env
+.env
+.env.*
+*.pem
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
