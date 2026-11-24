@@ -3,7 +3,7 @@
 Collects public Booking.com guest reviews for four Azzurro properties and turns them into a dashboard for the operations team. The dashboard shows how this week compares with last week, which property is slipping, what guests complain about, and which negative reviews still need a reply.
 
 **Live demo:** https://azzurro-review-insights.salesdesk-app.workers.dev
-**Sample data:** [`data/reviews.db`](data/reviews.db) (SQLite) and [`web/public/data/dashboard.json`](web/public/data/dashboard.json). Together they hold about 5,000 reviews.
+**Sample data:** [`data/reviews.db`](data/reviews.db) (SQLite) and [`web/public/data/dashboard.json`](web/public/data/dashboard.json). Together they hold 5,509 reviews collected on 25 Nov 2026.
 
 | Property | Booking.com page |
 |---|---|

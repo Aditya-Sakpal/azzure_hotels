@@ -67,9 +67,7 @@ tbody tr.sel { background: #f0f6ff; }
 .feed-filters input[type="search"] { flex: 1; min-width: 200px; }
 .check { display: flex; align-items: center; gap: 6px; font-size: 14px; }
 .feed { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.review { border: 1px solid var(--line); border-left: 4px solid var(--line); border-radius: 10px; padding: 12px 14px; font-size: 14px; }
-.review.positive { border-left-color: #2a78d6; }
-.review.negative { border-left-color: #e34948; }
+.review { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; font-size: 14px; }
 .review header { display: flex; gap: 10px; align-items: flex-start; }
 .review h3 { font-size: 15px; margin: 10px 0 4px; }
 .review p { margin: 6px 0; white-space: pre-line; line-height: 1.45; }
