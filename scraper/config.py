@@ -18,7 +18,7 @@ LOCAL_TZ = ZoneInfo("Australia/Sydney")
 
 # Scraping behaviour
 PAGE_SIZE = 25                 # reviews per GraphQL page (what Booking's own UI requests)
-MAX_PAGES_PER_PROPERTY = 80    # hard safety cap (= 2,000 reviews)
+MAX_PAGES_PER_PROPERTY = 200   # hard safety cap (= 5,000 reviews)
 REQUEST_DELAY_SECONDS = (1.5, 3.5)  # polite random delay between pages
 MAX_RETRIES = 4
 BACKOFF_BASE_SECONDS = 4

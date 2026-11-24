@@ -104,6 +104,18 @@ def topics_in(text: str | None) -> list[str]:
     return [key for key, rx in _COMPILED.items() if rx.search(text)]
 
 
+_EN_STOPWORDS = re.compile(r"\b(the|and|was|were|is|it|to|of|very|but|not|room|staff|we|i|good|great)\b", re.I)
+
+
+def looks_english(text: str) -> bool:
+    """Booking's `lang` is the guest's language, not always the text's. Many
+    non-English guests write in English, so fall back to a stopword check."""
+    words = re.findall(r"[^\W\d_]+", text)
+    if len(words) < 3:
+        return False
+    return len(_EN_STOPWORDS.findall(text)) / len(words) >= 0.15
+
+
 def sentiment_for(score: float) -> str:
     if score >= POSITIVE_MIN_SCORE:
         return "positive"
@@ -117,7 +129,8 @@ def classify(review: dict) -> dict:
     score = float(review["score"])
     sentiment = sentiment_for(score)
     lang = (review.get("language") or "en").lower()
-    classifiable = lang.startswith("en")
+    classifiable = lang.startswith("en") or looks_english(
+        " ".join(filter(None, [review.get("title"), review.get("liked_text"), review.get("disliked_text")])))
 
     complaints: list[str] = []
     praise: list[str] = []

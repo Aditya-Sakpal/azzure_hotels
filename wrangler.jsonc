@@ -1,0 +1,9 @@
+{
+  // Static dashboard served from Cloudflare Workers (static assets only, no server code).
+  "name": "azzurro-review-insights",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./web/dist",
+    "not_found_handling": "single-page-application"
+  }
+}
